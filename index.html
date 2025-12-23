@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sales & Logistics Strategy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0a2540;
+      --accent: #4f8cff;
+      --light: #f5f7fa;
+      --dark: #111;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      scroll-behavior: smooth;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      max-width: 900px;
+    }
+
+    .accent {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .hero {
+      background: linear-gradient(120deg, var(--primary), #020d1c);
+      color: white;
+    }
+
+    .hero h1 {
+      color: white;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 800px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: var(--primary);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero show">
+    <h1>Sales-Driven Logistics Strategy</h1>
+    <p>
+      Transforming logistics into a <span class="accent">sales growth engine</span>
+      through client portfolio expansion and operational discipline.
+    </p>
+  </section>
+
+  <!-- REALITY -->
+  <section>
+    <h2>Business Reality</h2>
+    <p>
+      The company operates three retail stores with strong product diversity.
+      However, sales are heavily dependent on individual customers, creating
+      volatility and limiting scalable growth.
+    </p>
+  </section>
+
+  <!-- PROBLEM -->
+  <section>
+    <h2>The Core Challenge</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Retail Dependence</h3>
+        <p>Small transactions, seasonal demand, limited forecasting.</p>
+      </div>
+      <div class="card">
+        <h3>Logistics Misalignment</h3>
+        <p>Same logistics model used for retail and bulk selling.</p>
+      </div>
+      <div class="card">
+        <h3>Untapped B2B Market</h3>
+        <p>No structured approach to institutions and supermarkets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRATEGY -->
+  <section>
+    <h2>Strategic Shift</h2>
+    <p>
+      Growth will not come from selling more products,
+      but from <span class="accent">selling differently</span>:
+      moving toward a hybrid sales model combining retail and institutional clients.
+    </p>
+  </section>
+
+  <!-- TARGET CLIENTS -->
+  <section>
+    <h2>Target Client Portfolio</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Supermarkets</h3><p>Bulk school & office supplies</p></div>
+      <div class="card"><h3>Libraries</h3><p>Books & educational materials</p></div>
+      <div class="card"><h3>Schools & Universities</h3><p>Recurring large orders</p></div>
+      <div class="card"><h3>Corporations</h3><p>Contract-based supply</p></div>
+    </div>
+  </section>
+
+  <!-- LOGISTICS -->
+  <section>
+    <h2>Logistics as a Sales Enabler</h2>
+    <p>
+      Logistics must evolve from a cost center into a competitive advantage by
+      enabling availability, reliability, and volume-based selling.
+    </p>
+    <div class="card-grid">
+      <div class="card"><h3>Dedicated B2B Stock</h3></div>
+      <div class="card"><h3>Bulk Packaging</h3></div>
+      <div class="card"><h3>Planned Deliveries</h3></div>
+    </div>
+  </section>
+
+  <!-- KPIs -->
+  <section>
+    <h2>Board-Level KPIs</h2>
+    <div class="card-grid">
+      <div class="card"><h3>Inventory Turnover</h3></div>
+      <div class="card"><h3>Service Level</h3></div>
+      <div class="card"><h3>Average Order Size</h3></div>
+      <div class="card"><h3>Client Concentration</h3></div>
+    </div>
+  </section>
+
+  <!-- DECISION -->
+  <section>
+    <h2>Key Executive Decision</h2>
+    <p>
+      Is the company ready to accept higher operational discipline
+      in exchange for predictable revenue, stronger client relationships,
+      and long-term growth?
+    </p>
+  </section>
+
+  <footer>
+    <p>Sales & Logistics Strategy Presentation</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.15 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
